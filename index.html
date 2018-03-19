@@ -127,33 +127,40 @@
             <button>
                Поиск гостиницы в Cедоне
            </button>
-            <form method="get" action="#">
+            <form method="get" action="https://echo.htmlacademy.ru">
                 <div>
                     <label for="arravial">
                       Дата заезда
                   </label>
                     <input type="date" id="arravial">
-                    <button></button>
+                    <button type="button">
+                    <span class="visually-hidden">Календарь</span>
+                    </button>
                 </div>
                 <div>
                     <label for="depart">
                       Дата выезда
                   </label>
                     <input type="date" id="depart">
-                    <button></button>
+                    <button type="button">
+                    <span class="visually-hidden">Календарь</span>
+                    </button>
                 </div>
                 <div>
                     <label for="adult">
                       Взрослые
-                  </label> 
-                  <button>-</button>
-                  <input type="text" value="2" id="adult">
-                  <button>+</button> 
+                  </label>
+                    <button type="button">-</button>
+                    <input type="text" value="2" id="adult">
+                    <button type="button">+</button>
                 </div>
                 <div>
                     <label for="child">
                       Дети
-                  </label> - <input type="text" value="0" id="child"> +
+                  </label>
+                    <button type="button">-</button>
+                    <input type="text" value="0" id="child">
+                    <button type="button">+</button>
                 </div>
                 <div>
                     <button type="submit">Найти</button>
