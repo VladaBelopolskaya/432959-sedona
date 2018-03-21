@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font: inherit;
+
+  text-align: center;
+  color: #a9a9a9;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: none;
+}
+
+.button.search {
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.button.search:hover, .button.search:focus {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+.button.search:active{
+  color: #857871;
+  background-color: #503e33;
+}
+
+.button.minus:hover, .button.minus:focus, .button.plus:hover, .button.plus:focus, .button.calendar:hover, .button.calendar:focus {
+  color: #000000;
+}
+
+.button.minus:active, .button.plus:active, .button.calendar:active{
+  color: #81b3d2;
+}
+
+.button.find {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.button.find:hover, .button.find:focus {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+.button.find:active{
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+
+.navigation {
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+
+  background-color: #ffffff;
+
+  list-style: none;
+}
+
+.navigation a {
+  color: #000000;
+}
+
+.navigation a:hover {
+  color: #81b3d2;
+}
+
+.navigation a:focus {
+  color: #b2b2b2;
+}
+
+.description {
+  line-height: 26px;
+  text-align: center;
+}
+
+.description h1 {
+  font-size: 21px;
+}
+
+.features-list, .life-list {
+  list-style: none;
+}
+
+.feature-item, .life-item {
+  text-align: center;
+}
+
+.description p, .life-item p, {
+  color: #333333;
+}
+
+/*Как сделать другой цвет у p в п.3,4,5 с помощью 2ух селекторов?  */
+
+.features-list li:nth-child(1) {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.features-list li:nth-child(2) {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+ol li:nth-child(n+3) {
+  background-color: #eeeeee;
+}
+
+.feature-item h2, .life-item h3 {
+  font-size: 21px;
+}
+
+.interested {
+  text-align: center;
+}
+
+.interested h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.interested p {
+  line-height: 24px;
+  color: #333333;
+}
+
+.interested-item input {
+  font: inherit;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.interested-item input:hover {
+  background-color: #ebebeb;
+}
+
+/* что-то не так с рамками */
+
+.interested-item input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.main-footer {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+
+
+
+

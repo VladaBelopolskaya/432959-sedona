@@ -2,149 +2,152 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="img/logo.png" alt="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Информаиця</a></li>
-                <li><a href="#">Фото и видео</a></li>
-                <li><a href="#">Карта штата</a></li>
-                <li><a href="#">Гостницы</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <form method="get" action="https://echo.htmlacademy.ru">
-                <fieldset>
-                    <legend>Инфраструктура:</legend>
-                    <label><input type="checkbox" name="pool" checked>Бассеин</label>
-                    <label><input type="checkbox" name="parking">Паркова</label>
-                    <label><input type="checkbox" name="wi-fi">Wi-fi</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Тип жилья:</legend>
-                    <label><input type="checkbox" name="holel" checked>Гостиница</label>
-                    <label><input type="checkbox" name="motel" checked>Мотель</label>
-                    <label><input type="checkbox" name="apartment" checked>Апартаменты</label>
-                </fieldset>
-                <fieldset>
-                    <label for="cost">Стоимость в сутки (р):</label>
-                    <!-- ползунок пока не понимаю как делать -->
-                    <button type="submit">Показать</button>
-                </fieldset>
-            </form>
-        </section>
-        <article>
-            <img src="img/amara.jpg" alt="hotel">
-            <h1>
-                Amara resot & spa
-            </h1>
-            <p>
-                Гостиница
-            </p>
-            <p>
-                от 4000 р.
-            </p>
-            <button type="button">
+  <header>
+    <div>
+      <img src="img/logo.png" alt="logo">
+    </div>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#">Информаиця</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="#">Гостницы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <label><input type="checkbox" name="pool" checked>Бассеин</label>
+          <label><input type="checkbox" name="parking">Паркова</label>
+          <label><input type="checkbox" name="wi-fi">Wi-fi</label>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <label><input type="checkbox" name="holel" checked>Гостиница</label>
+          <label><input type="checkbox" name="motel" checked>Мотель</label>
+          <label><input type="checkbox" name="apartment" checked>Апартаменты</label>
+        </fieldset>
+        <fieldset>
+          <label for="cost">Стоимость в сутки (р):</label>
+          <!-- ползунок пока не понимаю как делать -->
+          <button type="submit">Показать</button>
+        </fieldset>
+      </form>
+    </section class="hotels">
+    <article>
+      <img src="img/amara.jpg" alt="hotel">
+      <h1>
+        Amara resot & spa
+      </h1>
+      <p>
+        Гостиница
+      </p>
+      <p>
+        от 4000 р.
+      </p>
+      <button type="button info">
                    Подробнее
                 </button>
-            <button type="button">
+      <button type="button book">
                    Забронировать
                 </button>
-            <span class="visually-hidden">4 звезды</span>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <p>
-                Рейтинг: 8,5
-            </p>
-        </article>
-        <article>
-            <img src="img/desert.jpg" alt="hotel">
-            <h1>
-                Desert Quail Inn
-            </h1>
-            <p>
-                Мотель
-            </p>
-            <p>
-                от 3000 р.
-            </p>
-            <button type="button">
+      <span class="visually-hidden">4 звезды</span>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>
+        Рейтинг: 8,5
+      </p>
+    </article>
+    <article>
+      <img src="img/desert.jpg" alt="hotel">
+      <h1>
+        Desert Quail Inn
+      </h1>
+      <p>
+        Мотель
+      </p>
+      <p>
+        от 3000 р.
+      </p>
+      <button type="button info">
                    Подробнее
                 </button>
-            <button type="button">
+      <button type="button book">
                    Забронировать
                 </button>
-            <span class="visually-hidden">3 звезды</span>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <p>
-                Рейтинг: 8,9
-            </p>
-        </article>
-        <article>
-            <img src="img/villas.jpg" alt="hotel">
-            <h1>
-                Villas at Puco Diablo
-            </h1>
-            <p>
-                Апартаменты
-            </p>
-            <p>
-                от 2000 р.
-            </p>
-            <button type="button">
+      <span class="visually-hidden">3 звезды</span>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>
+        Рейтинг: 8,9
+      </p>
+    </article>
+    <article>
+      <img src="img/villas.jpg" alt="hotel">
+      <h1>
+        Villas at Puco Diablo
+      </h1>
+      <p>
+        Апартаменты
+      </p>
+      <p>
+        от 2000 р.
+      </p>
+      <button type="button info">
                    Подробнее
                 </button>
-            <button type="button">
+      <button type="button book">
                    Забронировать
                 </button>
-            <span class="visually-hidden">2 звезды</span>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-            <p>
-                Рейтинг: 9,2
-            </p>
-        </article>
-    </main>
-    <footer>
-        <div>
-            <p>
-                #visitsedona
-            </p>
-        </div>
-        <div>
-            <a href="#">
+      <span class="visually-hidden">2 звезды</span>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>
+        Рейтинг: 9,2
+      </p>
+    </article>
+  </main>
+  <footer>
+    <div>
+      <p>
+        #visitsedona
+      </p>
+    </div>
+    <div>
+      <a href="#">
             <span class="visually-hidden">Twitter</span></a>
-            <a href="#">
+      <a href="#">
             <span class="visually-hidden">Facebook</span></a>
-            <a href="#">
+      <a href="#">
             <span class="visually-hidden">Youtube</span></a>
-        </div>
-        <div>
-            <p>
-                Website by
-            </p>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
-        </div>
-    </footer>
+    </div>
+    <div>
+      <p>
+        Website by
+      </p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+    </div>
+  </footer>
 </body>
 
 </html>
