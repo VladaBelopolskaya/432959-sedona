@@ -11,15 +11,13 @@
 
 <body>
   <header>
-    <div>
-      <img src="img/logo.png" alt="logo">
-    </div>
+    <img src="img/logo.png" alt="logo">
     <nav>
       <ul class="navigation">
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="#">Гостницы</a></li>
+        <li class="navigation-item"><a href="#">Информаиця</a></li>
+        <li class="navigation-item"><a href="#">Фото и видео</a></li>
+        <li class="navigation-item"><a href="#">Карта штата</a></li>
+        <li class="navigation-item"><a href="#">Гостницы</a></li>
       </ul>
     </nav>
   </header>
@@ -46,6 +44,32 @@
           <p>
             Седона - не аттракцион для туристов, там течет своя жизнь
           </p>
+          <ul class="life-list">
+            <li class="life-item">
+              <h3>
+                Жилье
+              </h3>
+              <p>
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
+              </p>
+            </li>
+            <li class="life-item">
+              <h3>
+                Еда
+              </h3>
+              <p>
+                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+              </p>
+            </li>
+            <li class="life-item">
+              <h3>
+                Сувениры
+              </h3>
+              <p>
+                Не только китайского но и местного производства!
+              </p>
+            </li>
+          </ul>
         </li>
         <li class="feature-item">
           <img src="img/bridge.jpg" alt="devil's bridge">
@@ -93,32 +117,6 @@
           </p>
         </li>
       </ol>
-      <ul class="life-list">
-        <li class="life-item">
-          <h3>
-            Жилье
-          </h3>
-          <p>
-            Рекомендуем пожить в настоящем мотеле, все как в кино!
-          </p>
-        </li>
-        <li class="life-item">
-          <h3>
-            Еда
-          </h3>
-          <p>
-            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-          </p>
-        </li>
-        <li class="life-item">
-          <h3>
-            Сувениры
-          </h3>
-          <p>
-            Не только китайского но и местного производства!
-          </p>
-        </li>
-      </ul>
     </section>
     <section class="interested">
       <h2>
@@ -131,55 +129,47 @@
                Поиск гостиницы в Cедоне
            </button>
       <form method="get" action="https://echo.htmlacademy.ru">
-        <div class="interested-item">
-          <label for="arravial">
-                      Дата заезда
-                  </label>
-          <input type="date" id="arravial">
-          <button type="button" class="button calendar">
-                    <span class="visually-hidden">Календарь</span>
-                    </button>
-        </div>
-        <div class="interested-item">
-          <label for="depart">
-                      Дата выезда
-                  </label>
-          <input type="date" id="depart">
-          <button type="button" class="button calendar">
-                    <span class="visually-hidden">Календарь</span>
-                    </button>
-        </div>
-        <div class="interested-item">
-          <label for="adult">
-                      Взрослые
-                  </label>
-          <button type="button" class="button minus">
-                    -
-                    <span class="visually-hidden">Уменьшить количество</span>
-                    </button>
-          <input type="text" value="2" id="adult">
-          <button type="button" class="button plus">
-                    +
-                    <span class="visually-hidden">Увеличить количество</span>
-                    </button>
-        </div>
-        <div class="interested-item">
-          <label for="child">
-                      Дети
-                  </label>
-          <button type="button" class="button minus">
-                    -
-                    <span class="visually-hidden">Уменьшить количество</span>
-                    </button>
-          <input type="text" value="0" id="child">
-          <button type="button" class="button plus">
-                    +
-                    <span class="visually-hidden">Увеличить количество</span>
-                    </button>
-        </div>
-        <div>
-          <button type="submit" class="button find">Найти</button>
-        </div>
+        <ul>
+          <li class="interested-item">
+            <label for="arravial">Дата заезда</label>
+            <input type="date" id="arravial">
+            <button type="button" class="button calendar">
+            <span class="visually-hidden">Календарь</span>
+            </button>
+          </li>
+          <li class="interested-item">
+            <label for="depart">Дата выезда</label>
+            <input type="date" id="depart">
+            <button type="button" class="button calendar">
+            <span class="visually-hidden">Календарь</span>
+            </button>
+          </li>
+          <li class="interested-item">
+            <label for="adult">Взрослые</label>
+            <button type="button" class="button minus">
+            -
+            <span class="visually-hidden">Уменьшить количество</span>
+            </button>
+            <input type="text" value="2" id="adult">
+            <button type="button" class="button plus">
+            +
+            <span class="visually-hidden">Увеличить количество</span>
+            </button>
+          </li>
+          <li class="interested-item">
+            <label for="child">Дети</label>
+            <button type="button" class="button minus">
+            -
+            <span class="visually-hidden">Уменьшить количество</span>
+            </button>
+            <input type="text" value="0" id="child">
+            <button type="button" class="button plus">
+            +
+            <span class="visually-hidden">Увеличить количество</span>
+            </button>
+          </li>
+        </ul>
+        <button type="submit" class="button find">Найти</button>
       </form>
     </section>
     <section>
@@ -187,7 +177,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div>
+    <div class="hashtag">
       <p>
         #visitsedona
       </p>

@@ -19,7 +19,6 @@ a {
 .button {
   font: inherit;
 
-  text-align: center;
   color: #a9a9a9;
   vertical-align: middle;
   text-transform: uppercase;
@@ -39,15 +38,15 @@ a {
 }
 
 .button.search:active{
-  color: #857871;
+  color: rgba (255,255,255,0.3);
   background-color: #503e33;
 }
 
-.button.minus:hover, .button.minus:focus, .button.plus:hover, .button.plus:focus, .button.calendar:hover, .button.calendar:focus {
+.button.minus:hover, .button.minus:focus, .button.plus:hover, .button.plus:focus {
   color: #000000;
 }
 
-.button.minus:active, .button.plus:active, .button.calendar:active{
+.button.minus:active, .button.plus:active{
   color: #81b3d2;
 }
 
@@ -62,12 +61,18 @@ a {
 }
 
 .button.find:active{
-  color: #88b6d1;
+  color: rgba (255,255,255,0.3);
   background-color: #5496bd;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
 }
 
 .navigation {
   font-size: 14px;
+  font-weight: 700;
   line-height: 26px;
   color: #000000;
 
@@ -80,12 +85,12 @@ a {
   color: #000000;
 }
 
-.navigation a:hover {
+.navigation a:hover, .navigation a:focus {
   color: #81b3d2;
 }
 
-.navigation a:focus {
-  color: #b2b2b2;
+.navigation a:active {
+  color: rgba (0,0,0,0.3);
 }
 
 .description {
@@ -109,20 +114,27 @@ a {
   color: #333333;
 }
 
-/*Как сделать другой цвет у p в п.3,4,5 с помощью 2ух селекторов?  */
-
-.features-list li:nth-child(1) {
+.feature-item:nth-child(1) {
   color: #ffffff;
   background-color: #81b3d2;
 }
 
-.features-list li:nth-child(2) {
+.feature-item:nth-child(2) {
   color: #ffffff;
   background-color: #81b3d2;
 }
 
-ol li:nth-child(n+3) {
+.life-list {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.feature-item:nth-child(n+3) {
   background-color: #eeeeee;
+}
+
+.feature-item:nth-child(n+3) p {
+  color: #333333;
 }
 
 .feature-item h2, .life-item h3 {
@@ -157,14 +169,84 @@ ol li:nth-child(n+3) {
 /* что-то не так с рамками */
 
 .interested-item input:focus {
+  outline: none;
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
 
 .main-footer {
   color: #000000;
-
   background-color: #ffffff;
+  line-height: 26px;
+}
+
+.hashtag {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* как поменять цвет ссылки гостиницы в разделе о гостиницах? */
+
+.inner-page .navigation-item:last-child {
+  color: #766357;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-size: 16px;
+}
+
+.filters ul {
+  list-style: none;
+}
+
+.housing h1:hover, .housing h1:focus {
+  color: #81b3d2;
+}
+
+.housing h1:active {
+  color: rgba(0,0,0,0.3);
+}
+
+.housing p {
+  color: #333333;
+}
+
+.housing .button:active {
+  color: rgba(255,255,255,0.3);
+}
+
+.button.info {
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.button.info:hover, .button.info:focus {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+.button.info:active{
+  color: rgba (255,255,255,0.3);
+  background-color: #503e33;
+}
+
+.button.book {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.button.book:hover, .button.book:focus {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+.button.book:active{
+  color: rgba (255,255,255,0.3);
+  background-color: #5496bd;
 }
 
 

@@ -9,34 +9,55 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
   <header>
-    <div>
       <img src="img/logo.png" alt="logo">
-    </div>
     <nav>
       <ul class="navigation">
-        <li><a href="#">Информаиця</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="#">Гостницы</a></li>
+        <li class="navigation-item"><a href="#">Информаиця</a></li>
+        <li class="navigation-item"><a href="#">Фото и видео</a></li>
+        <li class="navigation-item"><a href="#">Карта штата</a></li>
+        <li class="navigation-item"><a href="#">Гостницы</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section>
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Инфраструктура:</legend>
-          <label><input type="checkbox" name="pool" checked>Бассеин</label>
-          <label><input type="checkbox" name="parking">Паркова</label>
-          <label><input type="checkbox" name="wi-fi">Wi-fi</label>
+          <ul>
+            <li>
+              <label for="filter-pool">Бассеин</label>
+              <input type="checkbox" name="pool" id="filter-pool" checked>
+            </li>
+            <li>
+              <label for="filter-parking">Паркова</label>
+              <input type="checkbox" name="parking" id="filter-parking">
+            </li>
+            <li>
+              <label for="filter-wifi">Wi-fi</label>
+              <input type="checkbox" name="wi-fi" id="filter-wifi">
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
           <legend>Тип жилья:</legend>
-          <label><input type="checkbox" name="holel" checked>Гостиница</label>
-          <label><input type="checkbox" name="motel" checked>Мотель</label>
-          <label><input type="checkbox" name="apartment" checked>Апартаменты</label>
+          <ul>
+            <li>
+              <label for="filter-hotel">Гостиница</label>
+              <input type="checkbox" name="holel" id="filter-hotel" checked>
+            </li>
+            <li>
+              <label for="filter-motel">Мотель</label>
+              <input type="checkbox" name="motel" id="filter-motel" checked>
+            </li>
+            <li>
+              <label for="filter-apartment">Апартаменты</label>
+              <input type="checkbox" name="apartment" id="filter-apartment" checked>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
           <label for="cost">Стоимость в сутки (р):</label>
@@ -44,8 +65,14 @@
           <button type="submit">Показать</button>
         </fieldset>
       </form>
-    </section class="hotels">
-    <article>
+    </section>
+    <section class="sort">
+      <h2 class="visually-hidden">Сортировка</h2>
+      <p>Найдено: 3</p>
+      <!-- Это размечать как форму с типом radio? -->
+    </section>
+    <!-- Может их тоже разметить списком как в барбершопе? -->
+    <article class="housing">
       <img src="img/amara.jpg" alt="hotel">
       <h1>
         Amara resot & spa
@@ -56,10 +83,10 @@
       <p>
         от 4000 р.
       </p>
-      <button type="button info">
+      <button type="button" class="button info">
                    Подробнее
                 </button>
-      <button type="button book">
+      <button type="button" class="button book">
                    Забронировать
                 </button>
       <span class="visually-hidden">4 звезды</span>
@@ -73,7 +100,7 @@
         Рейтинг: 8,5
       </p>
     </article>
-    <article>
+    <article class="housing">
       <img src="img/desert.jpg" alt="hotel">
       <h1>
         Desert Quail Inn
@@ -84,10 +111,10 @@
       <p>
         от 3000 р.
       </p>
-      <button type="button info">
+      <button type="button" class="button info">
                    Подробнее
                 </button>
-      <button type="button book">
+      <button type="button" class="button book">
                    Забронировать
                 </button>
       <span class="visually-hidden">3 звезды</span>
@@ -100,7 +127,7 @@
         Рейтинг: 8,9
       </p>
     </article>
-    <article>
+    <article class="housing">
       <img src="img/villas.jpg" alt="hotel">
       <h1>
         Villas at Puco Diablo
@@ -111,10 +138,10 @@
       <p>
         от 2000 р.
       </p>
-      <button type="button info">
+      <button type="button" class="button info">
                    Подробнее
                 </button>
-      <button type="button book">
+      <button type="button" class="button book">
                    Забронировать
                 </button>
       <span class="visually-hidden">2 звезды</span>
