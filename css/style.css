@@ -166,8 +166,6 @@ a {
   background-color: #ebebeb;
 }
 
-/* что-то не так с рамками */
-
 .interested-item input:focus {
   outline: none;
   background-color: #ffffff;
@@ -176,18 +174,16 @@ a {
 
 .main-footer {
   color: #000000;
-  background-color: #ffffff;
+  background-color: rgba(255,255,255,0.9);
   line-height: 26px;
 }
 
 .hashtag {
-  font-size: 26px;
+  font-size: 21px;
   font-weight: 700;
 }
 
-/* как поменять цвет ссылки гостиницы в разделе о гостиницах? */
-
-.inner-page .navigation-item:last-child {
+.active-page {
   color: #766357;
 }
 
@@ -197,6 +193,7 @@ a {
 
 .filters legend {
   font-size: 16px;
+  font-weight: 700;
 }
 
 .filters ul {
@@ -222,6 +219,7 @@ a {
 .button.info {
   color: #ffffff;
   background-color: #766357;
+  font-weight: 700;
 }
 
 .button.info:hover, .button.info:focus {
@@ -230,13 +228,14 @@ a {
 }
 
 .button.info:active{
-  color: rgba (255,255,255,0.3);
+  color: rgba(255,255,255,0.3);
   background-color: #503e33;
 }
 
 .button.book {
   color: #ffffff;
   background-color: #81b3d2;
+  font-weight: 700;
 }
 
 .button.book:hover, .button.book:focus {
@@ -245,7 +244,7 @@ a {
 }
 
 .button.book:active{
-  color: rgba (255,255,255,0.3);
+  color: rgba(255,255,255,0.3);
   background-color: #5496bd;
 }
 
