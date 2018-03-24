@@ -70,7 +70,17 @@ a {
   clip: rect(0 0 0 0);
 }
 
-.navigation {
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
@@ -81,15 +91,15 @@ a {
   list-style: none;
 }
 
-.navigation a {
+.main-navigation a {
   color: #000000;
 }
 
-.navigation a:hover, .navigation a:focus {
+.main-navigation a:hover, .main-navigation a:focus {
   color: #81b3d2;
 }
 
-.navigation a:active {
+.main-navigation a:active {
   color: rgba (0,0,0,0.3);
 }
 
@@ -100,18 +110,47 @@ a {
 
 .description h1 {
   font-size: 21px;
+  width: 455px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.description p {
+  margin-bottom: 58px;
+}
+
+.description p, .life-item p, {
+  color: #333333;
 }
 
 .features-list, .life-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .feature-item, .life-item {
   text-align: center;
 }
 
-.description p, .life-item p, {
-  color: #333333;
+.life-item {
+  width: 400px;
+}
+
+/* почему не работает? */
+
+.feature-item .bridge {
+  width: 1200px;
 }
 
 .feature-item:nth-child(1) {
@@ -176,14 +215,16 @@ a {
   color: #000000;
   background-color: rgba(255,255,255,0.9);
   line-height: 26px;
+  margin-top: 0;
+  padding: 35px 0;
 }
 
-.hashtag {
+.footer-hashtag {
   font-size: 21px;
   font-weight: 700;
 }
 
-.active-page {
+.active-page a {
   color: #766357;
 }
 
@@ -200,11 +241,15 @@ a {
   list-style: none;
 }
 
-.housing h1:hover, .housing h1:focus {
+.housing a {
+  color: rgb(0,0,0);
+}
+
+.housing a:hover, .housing a:focus {
   color: #81b3d2;
 }
 
-.housing h1:active {
+.housing a:active {
   color: rgba(0,0,0,0.3);
 }
 
@@ -248,7 +293,54 @@ a {
   background-color: #5496bd;
 }
 
+.main-header {
+  margin-bottom: 0;
+}
+
+.main-header-logo {
+  width: 140px;
+  height: 70px;
+}
 
 
+.footer-hashtag {
+  margin: 0;
+  width: 136px;
+  margin-right: 255px;
+  margin-left: 133px;
+}
+
+.footer-social {
+  margin: 0;
+  width: 150px;
+}
+
+.footer-copyright {
+  margin: 0;
+  width: 198px;
+  margin-left: 228px;
+}
+
+
+.main-footer .container {
+  display: flex;
+}
+
+.sort-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.housing {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  padding-left: 73px;
+  padding-right: 73px;
+
+}
 
 
