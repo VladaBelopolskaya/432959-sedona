@@ -12,8 +12,42 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Все ссылки и кнопки */
+
 a {
   text-decoration: none;
+}
+
+.active-page a {
+  color: #766357;
+}
+
+.main-navigation a,
+.housing a {
+  color: #000000;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus,
+.housing a:hover,
+.housing a:focus {
+  color: #81b3d2;
+}
+
+.main-navigation a:active,
+.housing a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .button {
@@ -27,53 +61,107 @@ a {
   border: none;
 }
 
-.button.search {
+.button.search,
+.button.book {
   color: #ffffff;
   background-color: #766357;
+  font-weight: 700;
 }
 
-.button.search:hover, .button.search:focus {
+.button.search:hover,
+.button.search:focus,
+.button.book:hover,
+.button.book:focus {
   color: #ffffff;
   background-color: #604e43;
 }
 
-.button.search:active{
-  color: rgba (255,255,255,0.3);
+.button.search:active,
+.button.book:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
 
-.button.minus:hover, .button.minus:focus, .button.plus:hover, .button.plus:focus {
+.button.minus:hover,
+.button.minus:focus,
+.button.plus:hover,
+.button.plus:focus {
   color: #000000;
 }
 
-.button.minus:active, .button.plus:active{
+.button.minus:active,
+.button.plus:active {
   color: #81b3d2;
 }
 
-.button.find {
+.button.find,
+.button.info {
   color: #ffffff;
   background-color: #81b3d2;
+  font-weight: 700;
 }
 
-.button.find:hover, .button.find:focus {
+.button.find:hover,
+.button.find:focus,
+.button.info:hover,
+.button.info:focus {
   color: #ffffff;
   background-color: #669ec0;
 }
 
-.button.find:active{
-  color: rgba (255,255,255,0.3);
+.button.find:active,
+.button.info:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
+/* Все ссылки и кнопки */
+
+/* Футер */
+
+.main-footer {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.9);
+  line-height: 26px;
+  margin-top: 0;
+  padding: 35px 0;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0;
+.main-footer .container {
+  display: flex;
+}
+
+.footer-hashtag {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0;
+  width: 136px;
+  margin-right: 255px;
+  margin-left: 133px;
+}
+
+.footer-social {
+  margin: 0;
+  width: 150px;
+}
+
+.footer-copyright {
+  margin: 0;
+  width: 198px;
+  margin-left: 228px;
+}
+
+/* Футер */
+
+/* Херед */
+
+.main-header {
+  margin-bottom: 0;
+}
+
+.main-header-logo {
+  width: 140px;
+  height: 70px;
 }
 
 .main-navigation {
@@ -91,17 +179,9 @@ a {
   list-style: none;
 }
 
-.main-navigation a {
-  color: #000000;
-}
+/* Херед */
 
-.main-navigation a:hover, .main-navigation a:focus {
-  color: #81b3d2;
-}
-
-.main-navigation a:active {
-  color: rgba (0,0,0,0.3);
-}
+/* Описание главная страница */
 
 .description {
   line-height: 26px;
@@ -117,15 +197,8 @@ a {
   margin-bottom: 40px;
 }
 
-.description p {
-  margin-bottom: 58px;
-}
-
-.description p, .life-item p, {
-  color: #333333;
-}
-
-.features-list, .life-list {
+.features-list,
+.life-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -133,32 +206,21 @@ a {
   flex-wrap: wrap;
 }
 
-.filters-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.feature-item, .life-item {
+.feature-item,
+.life-item {
   text-align: center;
 }
 
-.life-item {
+.life-item,
+.feature-item.space,
+.feature-item.road,
+.feature-item.tourists {
   width: 400px;
 }
 
-/* почему не работает? */
-
-.feature-item .bridge {
+.feature-item.bridge,
+.feature-item.town {
   width: 1200px;
-}
-
-.feature-item:nth-child(1) {
-  color: #ffffff;
-  background-color: #81b3d2;
-}
-
-.feature-item:nth-child(2) {
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -168,17 +230,61 @@ a {
   background-color: #ffffff;
 }
 
+/* Почему не меняется цвет p?*/
+
+.description p,
+.life-item p,
+  {
+  color: #333333;
+}
+
 .feature-item:nth-child(n+3) {
   background-color: #eeeeee;
 }
 
-.feature-item:nth-child(n+3) p {
-  color: #333333;
-}
-
-.feature-item h2, .life-item h3 {
+.feature-item h2,
+.life-item h3 {
   font-size: 21px;
 }
+
+.house {
+  padding-top: 60px;
+  padding-bottom: 87px;
+  padding-left: 73px;
+  padding-right: 73px;
+  box-sizing: border-box;
+}
+
+.food {
+  padding-top: 60px;
+  padding-bottom: 87px;
+  padding-left: 60px;
+  padding-right: 55px;
+  box-sizing: border-box;
+}
+
+.souvenirs {
+  padding-top: 60px;
+  padding-bottom: 87px;
+  padding-left: 65px;
+  padding-right: 62px;
+  box-sizing: border-box;
+}
+
+/* Почему не изменяется? */
+
+.sapce {
+  padding-top: 50px;
+  padding-bottom: 63px;
+  padding-left: 95px;
+  padding-right: 95px;
+  box-sizing: border-box;
+}
+
+
+/* Описание главная страница */
+
+/* Поиск гостиницы главная страница */
 
 .interested {
   text-align: center;
@@ -192,7 +298,15 @@ a {
 .interested p {
   line-height: 24px;
   color: #333333;
+  margin-bottom: 55px;
 }
+
+.interested-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .interested-item input {
   font: inherit;
@@ -211,21 +325,15 @@ a {
   border: 2px solid #e5e5e5;
 }
 
-.main-footer {
-  color: #000000;
-  background-color: rgba(255,255,255,0.9);
-  line-height: 26px;
-  margin-top: 0;
-  padding: 35px 0;
-}
 
-.footer-hashtag {
-  font-size: 21px;
-  font-weight: 700;
-}
+/* Поиск гостиницы главная страница */
 
-.active-page a {
-  color: #766357;
+/* Фильтр страница гостиниц */
+
+.filters-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .filters fieldset {
@@ -241,95 +349,29 @@ a {
   list-style: none;
 }
 
-.housing a {
-  color: rgb(0,0,0);
-}
+/* Фильтр страница гостиниц */
 
-.housing a:hover, .housing a:focus {
-  color: #81b3d2;
-}
+/* Сортировка страница гостиниц */
 
-.housing a:active {
-  color: rgba(0,0,0,0.3);
-}
-
-.housing p {
-  color: #333333;
-}
-
-.housing .button:active {
-  color: rgba(255,255,255,0.3);
-}
-
-.button.info {
-  color: #ffffff;
-  background-color: #766357;
-  font-weight: 700;
-}
-
-.button.info:hover, .button.info:focus {
-  color: #ffffff;
-  background-color: #604e43;
-}
-
-.button.info:active{
-  color: rgba(255,255,255,0.3);
-  background-color: #503e33;
-}
-
-.button.book {
-  color: #ffffff;
-  background-color: #81b3d2;
-  font-weight: 700;
-}
-
-.button.book:hover, .button.book:focus {
-  color: #ffffff;
-  background-color: #669ec0;
-}
-
-.button.book:active{
-  color: rgba(255,255,255,0.3);
-  background-color: #5496bd;
-}
-
-.main-header {
-  margin-bottom: 0;
-}
-
-.main-header-logo {
-  width: 140px;
-  height: 70px;
-}
-
-
-.footer-hashtag {
-  margin: 0;
-  width: 136px;
-  margin-right: 255px;
-  margin-left: 133px;
-}
-
-.footer-social {
-  margin: 0;
-  width: 150px;
-}
-
-.footer-copyright {
-  margin: 0;
-  width: 198px;
-  margin-left: 228px;
-}
-
-
-.main-footer .container {
-  display: flex;
-}
-
-.sort-list{
+.sort-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+.sort {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Сортировка страница гостиниц */
+
+/* Список гостиниц */
+
+.housing p {
+  color: #333333;
 }
 
 .housing {
@@ -340,7 +382,8 @@ a {
   padding-bottom: 29px;
   padding-left: 73px;
   padding-right: 73px;
+  box-sizing: border-box;
 
 }
 
-
+/* Список гостиниц */
