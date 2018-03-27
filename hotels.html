@@ -12,12 +12,14 @@
 <body>
   <header class="main-header container">
     <img class="main-header-logo" src="img/logo.png" alt="logo">
-    <nav>
-      <ul class="main-navigation">
-        <li class="navigation-item"><a href="#">Информаиця</a></li>
+    <nav class="main-navigation">
+      <ul class="navigation-left">
+        <li class="navigation-item"><a href="#">Информация</a></li>
         <li class="navigation-item"><a href="#">Фото и видео</a></li>
+      </ul>
+      <ul class="navigation-right">
         <li class="navigation-item"><a href="#">Карта штата</a></li>
-        <li class="navigation-item active-page"><a href="#">Гостницы</a></li>
+        <li class="navigation-item"><a href="#">Гостницы</a></li>
       </ul>
     </nav>
   </header>
@@ -61,8 +63,8 @@
             </ul>
           </fieldset>
           <fieldset>
-            <label for="cost">Стоимость в сутки (р):</label>
-            <!-- ползунок пока не понимаю как делать -->
+            <label>Стоимость в сутки (р):</label>
+            /////////////
             <button type="submit">Показать</button>
           </fieldset>
         </div>
@@ -73,7 +75,7 @@
       <p>Найдено: 3</p>
       <p>Сортировка:</p>
       <ul class="sort-list">
-        <li><a href="#">По цене</a></li>
+        <li><a href="#" class="active-sort">По цене</a></li>
         <li><a href="#">По типу</a></li>
         <li><a href="#">По рейтингу</a></li>
         <li><a href="#"><span class="visually-hidden">По возрастанию</span></a></li>

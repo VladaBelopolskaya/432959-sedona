@@ -14,7 +14,18 @@ body {
 
 .visually-hidden {
   position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -23,7 +34,12 @@ body {
   padding: 0;
 }
 
-/* Все ссылки и кнопки */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Цвета и текст ссылок и кнопок */
 
 a {
   text-decoration: none;
@@ -31,6 +47,14 @@ a {
 
 .active-page a {
   color: #766357;
+}
+
+.active-sort a {
+  color: #81b3d2;
+}
+
+.sort-list a {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-navigation a,
@@ -41,13 +65,19 @@ a {
 .main-navigation a:hover,
 .main-navigation a:focus,
 .housing a:hover,
-.housing a:focus {
+.housing a:focus,
+.sort-list a:hover,
+.sort-list a:focus {
   color: #81b3d2;
 }
 
 .main-navigation a:active,
 .housing a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-list a:active {
+  color: #000000;
 }
 
 .button {
@@ -115,9 +145,37 @@ a {
   background-color: #5496bd;
 }
 
+/*Не могу найти где отображается иконка календаря*/
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+
+  background-color: #81b3d2;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
+}
+
+.social-button:active path {
+  fill: rgba(255,255,255,0.3);
+}
+
+.html-button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 117px;
+  height: 43px;
+}
+
 /* Все ссылки и кнопки */
 
-/* Футер */
+/* Футер */ /*Как его наложить на карту? для боди не сделаешь же position absolute*/
 
 .main-footer {
   color: #000000;
@@ -125,30 +183,35 @@ a {
   line-height: 26px;
   margin-top: 0;
   padding: 35px 0;
+  width: 1200px;
 }
 
 .main-footer .container {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-hashtag {
   font-size: 21px;
   font-weight: 700;
   margin: 0;
-  width: 136px;
-  margin-right: 255px;
-  margin-left: 133px;
+  width: 400px;
+  text-align: center;
+
 }
 
 .footer-social {
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
   width: 150px;
 }
 
 .footer-copyright {
   margin: 0;
-  width: 198px;
-  margin-left: 228px;
+  width: 400px;
+  text-align: center;
 }
 
 /* Футер */
@@ -159,15 +222,14 @@ a {
   margin-bottom: 0;
 }
 
-.main-header-logo {
-  width: 140px;
-  height: 70px;
-}
-
 .main-navigation {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+  position: relative;
 
   font-size: 14px;
   font-weight: 700;
@@ -176,7 +238,30 @@ a {
 
   background-color: #ffffff;
 
+}
+
+.main-header-logo {
+  width: 140px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  z-index: 1;
+}
+
+.main-navigation .navigation-left,
+.main-navigation .navigation-right {
+  display: flex;
+  flex-direction: row;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-left a,
+.navigation-right a {
+  display: block;
+  padding: 15px 73px;
 }
 
 /* Херед */
@@ -186,7 +271,18 @@ a {
 .description {
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
+
+.img-welcome img {
+  padding-top: 75px;
+  padding-bottom: 80px;
+  height: 350px;
+  width: 460px;
+}
+
+/* фон добавлять с помощью псевдо элементов? */
 
 .description h1 {
   font-size: 21px;
@@ -194,7 +290,14 @@ a {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: 55px;
+}
+
+.description p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 59px;
 }
 
 .features-list,
@@ -207,8 +310,33 @@ a {
 }
 
 .feature-item,
-.life-item {
+.life-item,
+.interested {
   text-align: center;
+
+}
+
+.feature-item.town,
+.feature-item.bridge {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.feature-item-img img {
+  width: 800px;
+  height: 256px;
+}
+
+.feature-item-description {
+  width: 400px;
+  padding-top: 46px;
+  padding-bottom: 63px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
+
 }
 
 .life-item,
@@ -216,6 +344,13 @@ a {
 .feature-item.road,
 .feature-item.tourists {
   width: 400px;
+}
+
+.feature-item h2{
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .feature-item.bridge,
@@ -230,11 +365,8 @@ a {
   background-color: #ffffff;
 }
 
-/* Почему не меняется цвет p?*/
-
 .description p,
-.life-item p,
-  {
+.life-item p {
   color: #333333;
 }
 
@@ -247,33 +379,78 @@ a {
   font-size: 21px;
 }
 
+.life-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.life-item h3 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+}
+
 .house {
-  padding-top: 60px;
+  padding-top: 160px;
   padding-bottom: 87px;
   padding-left: 73px;
   padding-right: 73px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.house h3::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 72px;
+
+  top: 61px;
+  right: 164px;
+  background-image: url(../img/icon-1.svg);
 }
 
 .food {
-  padding-top: 60px;
+  padding-top: 160px;
   padding-bottom: 87px;
   padding-left: 60px;
   padding-right: 55px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.food h3::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 70px;
+
+  top: 61px;
+  right: 165px;
+  background-image: url(../img/icon-3.svg);
 }
 
 .souvenirs {
-  padding-top: 60px;
+  padding-top: 160px;
   padding-bottom: 87px;
   padding-left: 65px;
   padding-right: 62px;
   box-sizing: border-box;
+  position: relative;
 }
 
-/* Почему не изменяется? */
+.souvenirs h3::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 76px;
 
-.sapce {
+  top: 61px;
+  right: 168px;
+  background-image: url(../img/icon-2.svg);
+}
+
+.space {
   padding-top: 50px;
   padding-bottom: 63px;
   padding-left: 95px;
@@ -281,18 +458,41 @@ a {
   box-sizing: border-box;
 }
 
+.road {
+  padding-top: 50px;
+  padding-bottom: 63px;
+  padding-left: 67px;
+  padding-right: 67px;
+  box-sizing: border-box;
+}
+
+.tourists {
+  padding-top: 50px;
+  padding-bottom: 63px;
+  padding-left: 69px;
+  padding-right: 62px;
+  box-sizing: border-box;
+}
+
+
 
 /* Описание главная страница */
 
 /* Поиск гостиницы главная страница */
 
-.interested {
+.feature-item.interested {
   text-align: center;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .interested h2 {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
+  padding-top: 55px;
+  padding-bottom: 35px;
 }
 
 .interested p {
@@ -301,16 +501,92 @@ a {
   margin-bottom: 55px;
 }
 
+.button.search {
+  width: 570px;
+  padding-bottom: 31px;
+  padding-top: 31px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+/*Хочу сделать эту форму абсолютно спозиционированной, но она проподает под карту и z-index не помогает*/
+
+.search-form {
+  width: 575px;
+  margin: 0 auto;
+  padding: 58px 55px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  line-height: 26px;
+}
+
 .interested-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+.interested-item.arravial,
+.interested-item.depart {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 458px;
+  margin-bottom: 30px;
+  position: inherit;
+  justify-content: space-between; /*Почему не разносится по краям?*/
+}
+
+.button.calendar {
+  position: absolute;
+  width: 23px;
+  height: 25px;
+  right: -10px;
+  top: 50px; /*Почему он считает от самого верха? а не от формы?*/
+  background-image: url(../img/calendar.svg);
+  background-repeat: no-repeat;
+}
+
+.arravial input,
+.depart input {
+  width: 345px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  text-transform: inherit;
+}
+
+.interested-item.adult,
+.interested-item.child {
+  width: 230px;
+}
+
+.adult input,
+.child input {
+  width: 118px;
+  text-align: center;
+}
+
+.button.find {
+  width: 460px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+
 
 
 .interested-item input {
   font: inherit;
-
   background-color: #f2f2f2;
   border: none;
 }
@@ -329,6 +605,12 @@ a {
 /* Поиск гостиницы главная страница */
 
 /* Фильтр страница гостиниц */
+
+.fieldset {
+  margin: 0;
+  ;
+  padding: 0;
+}
 
 .filters-list {
   margin: 0;
@@ -385,5 +667,31 @@ a {
   box-sizing: border-box;
 
 }
+
+.housing img {
+  height: 90px;
+  width: 136px;
+}
+
+.housing-about {
+  padding-left: 30px;
+  display: flex;
+  width: 270px;
+  flex-wrap: wrap;
+}
+
+.housing-about p {
+  margin: 0;
+  padding: 0;
+  width: 112px;
+  margin-right: 6px;
+}
+
+.housing-about h1 {
+  padding: 0;
+  margin: 0;
+}
+
+
 
 /* Список гостиниц */
