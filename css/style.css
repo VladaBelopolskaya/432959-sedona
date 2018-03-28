@@ -103,6 +103,18 @@ a {
   border: none;
 }
 
+.button.calendar path {
+  fill: rgba(0,0,0, 0.3);
+}
+
+.button.calendar:hover path,
+.button.calendar:focus path {
+  fill: #000000;
+}
+.button.calendar:active path {
+  fill: #81b3d2;
+}
+
 .button.search,
 .button.book {
   color: #ffffff;
@@ -544,7 +556,6 @@ a {
   background-color: white;
   left: 50%;
   margin-left: -285px;
-
 }
 
 .interested-list {
@@ -564,21 +575,9 @@ a {
   display: flex;
   width: 458px;
   margin-bottom: 30px;
-  position: inherit;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  /*Почему не разносится по краям?*/
-}
-
-.button.calendar.one {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 7px;
-  top: 7px;
-  width: 20px;
-  height: 24px;
-  background-color: transparent;
 }
 
 .arravial input,
@@ -594,14 +593,72 @@ a {
   vertical-align: middle;
 }
 
-.interested-item.adult,
+.button.calendar.one {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 20px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.button.calendar.two {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 20px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.button.minus {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 40px;
+  height: 38px;
+  color: rgba(0,0,0,0.3);
+  z-index: 2;
+  background-color: transparent;
+  font-size: 40px;
+}
+
+.button.plus {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 40px;
+  height: 38px;
+  color: rgba(0,0,0,0.3);
+  z-index: 2;
+  background-color: transparent;
+  font-size: 30px;
+  right: 10px;
+}
+
+/* не понимаю откуда отступы справа и слева взрослые/дети */
+
+.interested-item.adult {
+  width: 226px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 .interested-item.child {
-  width: 230px;
+  width: 179px;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .adult input,
 .child input {
-  width: 118px;
+  width: 115px;
   text-align: center;
   padding: 6px;
 }
@@ -614,6 +671,7 @@ a {
   padding-right: 0;
   font-size: 21px;
   line-height: 26px;
+  margin-top: 55px;
 }
 
 .interested-item input {
