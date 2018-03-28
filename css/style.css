@@ -314,7 +314,9 @@ a {
 }
 
 .img-welcome {
-  background-image: url(../img/background_index.jpg);
+  background-image: url(../img/background_index.jpg)
+
+    /* не хочет добавлять второе изображение*/
 }
 
 .description h1 {
