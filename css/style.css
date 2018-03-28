@@ -39,22 +39,19 @@ img {
   height: auto;
 }
 
-/* Цвета и текст ссылок и кнопок */
+/* ссылки и кнопки */
 
 a {
   text-decoration: none;
 }
 
-.active-page a {
+.main-navigation .active-page {
   color: #766357;
 }
 
-.active-sort a {
-  color: #81b3d2;
-}
-
-.sort-list a {
-  color: rgba(0, 0, 0, 0.3);
+.main-navigation a {
+  display: block;
+  margin: 15px 73px;
 }
 
 .main-navigation a,
@@ -65,15 +62,30 @@ a {
 .main-navigation a:hover,
 .main-navigation a:focus,
 .housing a:hover,
-.housing a:focus,
-.sort-list a:hover,
-.sort-list a:focus {
+.housing a:focus {
   color: #81b3d2;
 }
 
 .main-navigation a:active,
 .housing a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-list .active-sort {
+  color: #81b3d2;
+  border-bottom: none;
+}
+
+.sort-list a {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #81b3d2;
+}
+
+/* не соображу как убрать подчеркивание у стрелочек сортировк  */
+
+.sort-list a:hover,
+.sort-list a:focus {
+  color: #81b3d2;
 }
 
 .sort-list a:active {
@@ -95,7 +107,6 @@ a {
 .button.book {
   color: #ffffff;
   background-color: #766357;
-  font-weight: 700;
 }
 
 .button.search:hover,
@@ -128,7 +139,6 @@ a {
 .button.info {
   color: #ffffff;
   background-color: #81b3d2;
-  font-weight: 700;
 }
 
 .button.find:hover,
@@ -144,8 +154,6 @@ a {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
-
-/*Не могу найти где отображается иконка календаря*/
 
 .social-button {
   display: flex;
@@ -163,7 +171,7 @@ a {
 }
 
 .social-button:active path {
-  fill: rgba(255,255,255,0.3);
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .html-button {
@@ -173,22 +181,45 @@ a {
   height: 43px;
 }
 
+.sort-button path {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.sort-button:hover path,
+.sort-button:focus path {
+  fill: #000000;
+}
+
+.sort-button:active path {
+  fill: #5496bd;
+}
+
+.sort-button.active-button path {
+  fill: #5496bd;
+}
+
 /* Все ссылки и кнопки */
 
-/* Футер */ /*Как его наложить на карту? для боди не сделаешь же position absolute*/
+/* Футер */
 
-.main-footer {
+.footer {
   color: #000000;
   background-color: rgba(255, 255, 255, 0.9);
   line-height: 26px;
-  margin-top: 0;
+  margin: 0;
   padding: 35px 0;
-  width: 1200px;
 }
 
-.main-footer .container {
+.footer.main {
+  position: relative;
+  z-index: 1;
+  margin-top: -120px;
+}
+
+.footer .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-hashtag {
@@ -197,7 +228,6 @@ a {
   margin: 0;
   width: 400px;
   text-align: center;
-
 }
 
 .footer-social {
@@ -227,7 +257,6 @@ a {
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 1200px;
   position: relative;
 
@@ -238,6 +267,11 @@ a {
 
   background-color: #ffffff;
 
+  list-style: none;
+}
+
+.main-navigation li:nth-child(2) {
+  margin-right: 254px;
 }
 
 .main-header-logo {
@@ -247,21 +281,6 @@ a {
   left: 50%;
   margin-left: -70px;
   z-index: 1;
-}
-
-.main-navigation .navigation-left,
-.main-navigation .navigation-right {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation-left a,
-.navigation-right a {
-  display: block;
-  padding: 15px 73px;
 }
 
 /* Херед */
@@ -282,7 +301,9 @@ a {
   width: 460px;
 }
 
-/* фон добавлять с помощью псевдо элементов? */
+.img-welcome {
+  background-image: url(../img/background_index.jpg);
+}
 
 .description h1 {
   font-size: 21px;
@@ -313,7 +334,6 @@ a {
 .life-item,
 .interested {
   text-align: center;
-
 }
 
 .feature-item.town,
@@ -322,6 +342,10 @@ a {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+}
+
+.feature-item-img {
+  line-height: 0;
 }
 
 .feature-item-img img {
@@ -336,7 +360,6 @@ a {
   padding-left: 60px;
   padding-right: 60px;
   box-sizing: border-box;
-
 }
 
 .life-item,
@@ -346,7 +369,7 @@ a {
   width: 400px;
 }
 
-.feature-item h2{
+.feature-item h2 {
   display: block;
   width: 150px;
   margin: 0 auto;
@@ -474,8 +497,6 @@ a {
   box-sizing: border-box;
 }
 
-
-
 /* Описание главная страница */
 
 /* Поиск гостиницы главная страница */
@@ -511,16 +532,19 @@ a {
   line-height: 26px;
 }
 
-/*Хочу сделать эту форму абсолютно спозиционированной, но она проподает под карту и z-index не помогает*/
-
 .search-form {
-  width: 575px;
+  width: 570px;
   margin: 0 auto;
   padding: 58px 55px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   line-height: 26px;
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  margin-left: -285px;
+
 }
 
 .interested-list {
@@ -529,6 +553,7 @@ a {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   justify-content: space-between;
 }
 
@@ -540,25 +565,33 @@ a {
   width: 458px;
   margin-bottom: 30px;
   position: inherit;
-  justify-content: space-between; /*Почему не разносится по краям?*/
+  justify-content: space-between;
+  align-items: center;
+  /*Почему не разносится по краям?*/
 }
 
-.button.calendar {
+.button.calendar.one {
+  margin: 0;
+  padding: 0;
   position: absolute;
-  width: 23px;
-  height: 25px;
-  right: -10px;
-  top: 50px; /*Почему он считает от самого верха? а не от формы?*/
-  background-image: url(../img/calendar.svg);
-  background-repeat: no-repeat;
+  right: 7px;
+  top: 7px;
+  width: 20px;
+  height: 24px;
+  background-color: transparent;
 }
 
 .arravial input,
 .depart input {
   width: 345px;
-  padding-left: 10px;
+  padding: 6px 10px;
   box-sizing: border-box;
   text-transform: inherit;
+}
+
+.arravial label {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .interested-item.adult,
@@ -570,6 +603,7 @@ a {
 .child input {
   width: 118px;
   text-align: center;
+  padding: 6px;
 }
 
 .button.find {
@@ -581,9 +615,6 @@ a {
   font-size: 21px;
   line-height: 26px;
 }
-
-
-
 
 .interested-item input {
   font: inherit;
@@ -601,15 +632,21 @@ a {
   border: 2px solid #e5e5e5;
 }
 
-
 /* Поиск гостиницы главная страница */
 
 /* Фильтр страница гостиниц */
 
-.fieldset {
+.filters {
+  background-image: url(../img/background_hotels.jpg);
+}
+
+.filters form {
   margin: 0;
-  ;
   padding: 0;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .filters-list {
@@ -620,20 +657,206 @@ a {
 
 .filters fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filters legend {
   font-size: 16px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .filters ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.filters li {
+  margin-top: 20px;
+}
+
+.filter-infrastructure legend {
+  margin-right: 110px;
+}
+
+.filter-type legend {
+  margin-right: 392px;
+}
+
+.filter-infrastructure label,
+.filter-type label {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  color: #ffffff;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 33px;
+  height: 30px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + span {
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+}
+
+/* как сделать когда чекбокс заблокирован, такой свг нет, значит надо куда-то весь код вставлять? или просто выгрузить картинкой из фотошопа?*/
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  width: 320px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 0;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: middle;
+  color: #ffffff;
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+/* Не понимаю что происходит при наведении по стайлгайду, она увеличивается?*/
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 35px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 /* Фильтр страница гостиниц */
 
 /* Сортировка страница гостиниц */
+
+.sort {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.sort p:first-of-type {
+  margin-right: 48px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sort p:last-of-type {
+  margin-right: 38px;
+}
 
 .sort-list {
   list-style: none;
@@ -642,10 +865,17 @@ a {
   display: flex;
 }
 
-.sort {
+.sort-list li {
+  margin-right: 30px;
+}
+
+.sort-list li:last-of-type {
   margin: 0;
-  padding: 0;
-  display: flex;
+}
+
+.sort-list li:nth-last-of-type(2) {
+  margin-left: 440px;
+  margin-right: 10px
 }
 
 /* Сортировка страница гостиниц */
@@ -665,7 +895,7 @@ a {
   padding-left: 73px;
   padding-right: 73px;
   box-sizing: border-box;
-
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .housing img {
@@ -676,22 +906,70 @@ a {
 .housing-about {
   padding-left: 30px;
   display: flex;
-  width: 270px;
+  width: 280px;
   flex-wrap: wrap;
+}
+
+.housing-about h1 {
+  margin: 0;
+  padding: 0;
 }
 
 .housing-about p {
   margin: 0;
   padding: 0;
-  width: 112px;
+  width: 108px;
   margin-right: 6px;
 }
 
-.housing-about h1 {
+.housing-about a {
   padding: 0;
   margin: 0;
+  font-size: 26px;
 }
 
+.housing-about .button {
+  margin: 0;
+  padding: 0;
+}
 
+.button.info {
+  width: 108px;
+  margin-right: 6px;
+}
+
+.button.book {
+  width: 142px;
+}
+
+.housing-rate {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.housing-rate ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.housing-rate li {
+  background-image: url(../img/star.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.housing-rate p {
+  margin: 0;
+  padding: 4px 14px;
+  background-color: #f2f2f2;
+  margin-top: auto;
+}
 
 /* Список гостиниц */
