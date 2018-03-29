@@ -81,7 +81,9 @@ a {
   border-bottom: 1px dotted #81b3d2;
 }
 
-/* не соображу как убрать подчеркивание у стрелочек сортировк  */
+.sort-button a{
+  border-bottom: none;
+}
 
 .sort-list a:hover,
 .sort-list a:focus {
@@ -314,9 +316,13 @@ a {
 }
 
 .img-welcome {
-  background-image: url(../img/background_index.jpg)
+  background-image:
+  url(../img/corners.png), url(../img/background_index.jpg);
 
-    /* не хочет добавлять второе изображение*/
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, top;
+
+    /* не видит второе изображение*/
 }
 
 .description h1 {
@@ -385,7 +391,7 @@ a {
 
 .feature-item h2 {
   display: block;
-  width: 150px;
+  width: 155px;
   margin: 0 auto;
   padding: 0;
 }
@@ -544,6 +550,7 @@ a {
   padding-right: 0;
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
 }
 
 .search-form {
@@ -558,6 +565,7 @@ a {
   background-color: white;
   left: 50%;
   margin-left: -285px;
+  font-weight: 700;
 }
 
 .interested-list {
@@ -568,6 +576,14 @@ a {
   flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
+}
+
+.interested-list li {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .interested-item.arravial,
@@ -617,53 +633,60 @@ a {
   background-color: transparent;
 }
 
+interested-item.box {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  width: 114px;
+
+}
+
 .button.minus {
   margin: 0;
   padding: 0;
-  position: absolute;
-  width: 40px;
+  width: 38px;
   height: 38px;
   color: rgba(0,0,0,0.3);
-  z-index: 2;
-  background-color: transparent;
+  background-color: #f2f2f2;
   font-size: 40px;
 }
 
 .button.plus {
   margin: 0;
   padding: 0;
-  position: absolute;
-  width: 40px;
+  width: 38px;
   height: 38px;
   color: rgba(0,0,0,0.3);
-  z-index: 2;
-  background-color: transparent;
+  background-color: #f2f2f2;
   font-size: 30px;
-  right: 10px;
 }
 
 /* не понимаю откуда отступы справа и слева взрослые/дети */
 
 .interested-item.adult {
-  width: 226px;
-  position: relative;
+  width: 227px;
   margin: 0;
   padding: 0;
 }
 
 .interested-item.child {
-  width: 179px;
-  position: relative;
+  width: 178px;
   margin: 0;
   padding: 0;
 }
 
 .adult input,
 .child input {
-  width: 115px;
+  width: 36px;
   text-align: center;
-  padding: 6px;
+  padding: 6px 0px;
+  margin-left: -3px;
+  margin-right: -4px;
 }
+
+/* Я правильно слепила кнопки и форму между собой? Как опустить форму по ниже? Они же все по центу стоят, но форма все равно по выше */
 
 .button.find {
   width: 460px;
@@ -689,7 +712,7 @@ a {
 .interested-item input:focus {
   outline: none;
   background-color: #ffffff;
-  border: 2px solid #e5e5e5;
+  outline:2px solid #e5e5e5;
 }
 
 /* Поиск гостиницы главная страница */
@@ -773,7 +796,15 @@ input[type="checkbox"]:checked + span {
   background-repeat: no-repeat;
 }
 
-/* как сделать когда чекбокс заблокирован, такой свг нет, значит надо куда-то весь код вставлять? или просто выгрузить картинкой из фотошопа?*/
+input[type="checkbox"]:checked:disabled + span {
+  background-image: url(../img/checkbox-on-off.svg);
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:disabled + span {
+  background-image: url(../img/checkbox-off-off.svg);
+  background-repeat: no-repeat;
+}
 
 .price-controls {
   position: relative;
@@ -807,11 +838,12 @@ input[type="checkbox"]:checked + span {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 21px;
+  line-height: 32px;
   vertical-align: middle;
   color: #ffffff;
   width: 90px;
   padding-left: 65px;
+  min-height: 32px;
 }
 
 .price-controls input {
@@ -858,9 +890,8 @@ input[type="checkbox"]:checked + span {
 
 .range-toggle:hover {
   background: #1c4f80;
+  transform: scale(2);
 }
-
-/* Не понимаю что происходит при наведении по стайлгайду, она увеличивается?*/
 
 .range-toggle-min {
   left: 0;
@@ -923,6 +954,8 @@ input[type="checkbox"]:checked + span {
   margin: 0;
   padding: 0;
   display: flex;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .sort-list li {
@@ -934,7 +967,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .sort-list li:nth-last-of-type(2) {
-  margin-left: 440px;
+  margin-left: 460px;
   margin-right: 10px
 }
 
@@ -991,6 +1024,7 @@ input[type="checkbox"]:checked + span {
 .housing-about .button {
   margin: 0;
   padding: 0;
+  font-weight: 700;
 }
 
 .button.info {
