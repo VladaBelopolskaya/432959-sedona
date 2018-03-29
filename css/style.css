@@ -285,7 +285,11 @@ a {
 }
 
 .main-navigation li:nth-child(2) {
-  margin-right: 254px;
+  margin-right: 240px;
+}
+
+.main-navigation li:nth-child(3) {
+  margin-right: 20px;
 }
 
 .main-header-logo {
@@ -309,10 +313,10 @@ a {
 }
 
 .img-welcome img {
-  padding-top: 75px;
-  padding-bottom: 80px;
+  padding-top: 76px;
+  padding-bottom: 74px;
   height: 350px;
-  width: 460px;
+  width: 458px;
 }
 
 .img-welcome {
@@ -320,9 +324,7 @@ a {
   url(../img/corners.png), url(../img/background_index.jpg);
 
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom, top;
-
-    /* не видит второе изображение*/
+  background-position: bottom, 0 -55px;
 }
 
 .description h1 {
@@ -332,13 +334,13 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  margin-top: 55px;
+  margin-top: 60px;
 }
 
 .description p {
   margin: 0;
   padding: 0;
-  padding-bottom: 59px;
+  padding-bottom: 48px;
 }
 
 .features-list,
@@ -376,10 +378,15 @@ a {
 .feature-item-description {
   width: 400px;
   padding-top: 46px;
-  padding-bottom: 63px;
+  padding-bottom: 43px;
   padding-left: 60px;
   padding-right: 60px;
   box-sizing: border-box;
+}
+
+.bridge .feature-item-description {
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 .life-item,
@@ -391,9 +398,15 @@ a {
 
 .feature-item h2 {
   display: block;
-  width: 155px;
+  width: 152px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.feature-item-description p:first-of-type {
+  margin-bottom: 20px;
 }
 
 .feature-item.bridge,
@@ -430,12 +443,12 @@ a {
 .life-item h3 {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .house {
   padding-top: 160px;
-  padding-bottom: 87px;
+  padding-bottom: 81px;
   padding-left: 73px;
   padding-right: 73px;
   box-sizing: border-box;
@@ -455,7 +468,7 @@ a {
 
 .food {
   padding-top: 160px;
-  padding-bottom: 87px;
+  padding-bottom: 81px;
   padding-left: 60px;
   padding-right: 55px;
   box-sizing: border-box;
@@ -475,7 +488,7 @@ a {
 
 .souvenirs {
   padding-top: 160px;
-  padding-bottom: 87px;
+  padding-bottom: 81px;
   padding-left: 65px;
   padding-right: 62px;
   box-sizing: border-box;
@@ -495,7 +508,7 @@ a {
 
 .space {
   padding-top: 50px;
-  padding-bottom: 63px;
+  padding-bottom: 48px;
   padding-left: 95px;
   padding-right: 95px;
   box-sizing: border-box;
@@ -503,7 +516,7 @@ a {
 
 .road {
   padding-top: 50px;
-  padding-bottom: 63px;
+  padding-bottom: 48px;
   padding-left: 67px;
   padding-right: 67px;
   box-sizing: border-box;
@@ -511,9 +524,9 @@ a {
 
 .tourists {
   padding-top: 50px;
-  padding-bottom: 63px;
-  padding-left: 69px;
-  padding-right: 62px;
+  padding-bottom: 48px;
+  padding-left: 66px;
+  padding-right: 66px;
   box-sizing: border-box;
 }
 
@@ -532,14 +545,14 @@ a {
   margin: 0;
   font-size: 30px;
   line-height: 36px;
-  padding-top: 55px;
-  padding-bottom: 35px;
+  padding-top: 52px;
+  padding-bottom: 10px;
 }
 
 .interested p {
   line-height: 24px;
   color: #333333;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 
 .button.search {
@@ -556,7 +569,7 @@ a {
 .search-form {
   width: 570px;
   margin: 0 auto;
-  padding: 58px 55px;
+  padding: 55px 55px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -633,7 +646,7 @@ a {
   background-color: transparent;
 }
 
-interested-item.box {
+.interested-item.box {
   display: flex;
   margin: 0;
   padding: 0;
@@ -663,8 +676,6 @@ interested-item.box {
   font-size: 30px;
 }
 
-/* не понимаю откуда отступы справа и слева взрослые/дети */
-
 .interested-item.adult {
   width: 227px;
   margin: 0;
@@ -682,11 +693,7 @@ interested-item.box {
   width: 36px;
   text-align: center;
   padding: 6px 0px;
-  margin-left: -3px;
-  margin-right: -4px;
 }
-
-/* Я правильно слепила кнопки и форму между собой? Как опустить форму по ниже? Они же все по центу стоят, но форма все равно по выше */
 
 .button.find {
   width: 460px;
@@ -696,7 +703,7 @@ interested-item.box {
   padding-right: 0;
   font-size: 21px;
   line-height: 26px;
-  margin-top: 55px;
+  margin-top: 50px;
 }
 
 .interested-item input {
@@ -728,8 +735,8 @@ interested-item.box {
   padding: 0;
   padding-left: 73px;
   padding-right: 73px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 33px;
 }
 
 .filters-list {
@@ -758,11 +765,11 @@ interested-item.box {
 }
 
 .filters li {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .filter-infrastructure legend {
-  margin-right: 110px;
+  margin-right: 116px;
 }
 
 .filter-type legend {
@@ -841,8 +848,8 @@ input[type="checkbox"]:disabled + span {
   line-height: 32px;
   vertical-align: middle;
   color: #ffffff;
-  width: 90px;
-  padding-left: 65px;
+  width: 80px;
+  padding-left: 67px;
   min-height: 32px;
 }
 
@@ -934,8 +941,8 @@ input[type="checkbox"]:disabled + span {
   align-items: center;
   padding-left: 73px;
   padding-right: 73px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .sort p:first-of-type {
@@ -947,6 +954,8 @@ input[type="checkbox"]:disabled + span {
 
 .sort p:last-of-type {
   margin-right: 38px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .sort-list {
@@ -959,7 +968,7 @@ input[type="checkbox"]:disabled + span {
 }
 
 .sort-list li {
-  margin-right: 30px;
+  margin-right: 32px;
 }
 
 .sort-list li:last-of-type {
@@ -967,7 +976,7 @@ input[type="checkbox"]:disabled + span {
 }
 
 .sort-list li:nth-last-of-type(2) {
-  margin-left: 460px;
+  margin-left: 475px;
   margin-right: 10px
 }
 
@@ -1006,6 +1015,8 @@ input[type="checkbox"]:disabled + span {
 .housing-about h1 {
   margin: 0;
   padding: 0;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .housing-about p {
