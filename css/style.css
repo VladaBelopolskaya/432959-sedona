@@ -9,7 +9,15 @@ body {
   color: #000000;
   text-transform: uppercase;
 
+  background-color: #f2f2f2;
+}
+
+.decor-shadow {
   background-color: #ffffff;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
 }
 
 .visually-hidden {
@@ -28,12 +36,6 @@ body {
   overflow: hidden;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -45,28 +47,28 @@ a {
   text-decoration: none;
 }
 
-.main-navigation .active-page {
+.navigation .active-page {
   color: #766357;
 }
 
-.main-navigation a {
+.navigation a {
   display: block;
   margin: 15px 73px;
 }
 
-.main-navigation a,
+.navigation a,
 .housing a {
   color: #000000;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus,
+.navigation a:hover,
+.navigation a:focus,
 .housing a:hover,
 .housing a:focus {
   color: #81b3d2;
 }
 
-.main-navigation a:active,
+.navigation a:active,
 .housing a:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -262,11 +264,7 @@ a {
 
 /* Херед */
 
-.main-header {
-  margin-bottom: 0;
-}
-
-.main-navigation {
+.navigation {
   margin: 0;
   padding: 0;
   display: flex;
@@ -284,15 +282,15 @@ a {
   list-style: none;
 }
 
-.main-navigation li:nth-child(2) {
+.navigation li:nth-child(2) {
   margin-right: 240px;
 }
 
-.main-navigation li:nth-child(3) {
+.navigation li:nth-child(3) {
   margin-right: 20px;
 }
 
-.main-header-logo {
+.header-logo {
   width: 140px;
   height: 70px;
   position: absolute;
@@ -579,6 +577,7 @@ a {
   left: 50%;
   margin-left: -285px;
   font-weight: 700;
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
 }
 
 .interested-list {
@@ -722,6 +721,12 @@ a {
   outline:2px solid #e5e5e5;
 }
 
+.map {
+  line-height: 0;
+  width: 1200px;
+  height: 593px;
+}
+
 /* Поиск гостиницы главная страница */
 
 /* Фильтр страница гостиниц */
@@ -743,6 +748,7 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
 }
 
 .filters fieldset {
@@ -768,12 +774,8 @@ a {
   margin-top: 24px;
 }
 
-.filter-infrastructure legend {
-  margin-right: 116px;
-}
-
-.filter-type legend {
-  margin-right: 392px;
+.filters-list fieldset:last-of-type {
+  margin-left: 230px;
 }
 
 .filter-infrastructure label,
@@ -851,6 +853,8 @@ input[type="checkbox"]:disabled + span {
   width: 80px;
   padding-left: 67px;
   min-height: 32px;
+
+  cursor: pointer;
 }
 
 .price-controls input {
@@ -893,6 +897,7 @@ input[type="checkbox"]:disabled + span {
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
 }
 
 .range-toggle:hover {
@@ -921,6 +926,7 @@ input[type="checkbox"]:disabled + span {
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .btn-transparent:hover {
@@ -1006,7 +1012,7 @@ input[type="checkbox"]:disabled + span {
 }
 
 .housing-about {
-  padding-left: 30px;
+  padding-left: 28px;
   display: flex;
   width: 280px;
   flex-wrap: wrap;
@@ -1016,7 +1022,8 @@ input[type="checkbox"]:disabled + span {
   margin: 0;
   padding: 0;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 28px;
+  margin-top: -5px;
 }
 
 .housing-about p {
@@ -1024,22 +1031,20 @@ input[type="checkbox"]:disabled + span {
   padding: 0;
   width: 108px;
   margin-right: 6px;
-}
-
-.housing-about a {
-  padding: 0;
-  margin: 0;
-  font-size: 26px;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: -5px;
 }
 
 .housing-about .button {
   margin: 0;
   padding: 0;
   font-weight: 700;
+  line-height: 28px;
 }
 
 .button.info {
-  width: 108px;
+  width: 110px;
   margin-right: 6px;
 }
 
