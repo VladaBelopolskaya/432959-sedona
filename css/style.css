@@ -758,15 +758,19 @@ a {
 
 .search-form input::-webkit-input-placeholder {
   opacity: 1;
+  color: inherit;
 }
 .search-form input:-ms-input-placeholder {
   opacity: 1;
+  color: inherit;
 }
 .search-form input::-ms-input-placeholder {
   opacity: 1;
+  color: inherit;
 }
 .search-form input::placeholder {
   opacity: 1;
+  color: inherit;
 }
 
 .arravial input,
