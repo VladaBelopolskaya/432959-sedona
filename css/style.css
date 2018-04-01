@@ -13,6 +13,7 @@ body {
 }
 
 .decor-shadow {
+  position: relative;
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
@@ -297,6 +298,7 @@ a {
           flex-direction: row;
   width: 1200px;
   position: relative;
+  flex-wrap: wrap;
 
   font-size: 14px;
   font-weight: 700;
@@ -775,12 +777,14 @@ a {
 
 .arravial input,
 .depart input {
-  width: 345px;
+  display: inline-block;
+  margin-left: auto;
+  width: 341px;
   padding: 6px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-transform: inherit;
-  line-height: 39px;
+  line-height: 35px;
 }
 
 .arravial label {
@@ -861,7 +865,7 @@ a {
 
 .adult input,
 .child input {
-  width: 36px;
+  width: 32px;
   text-align: center;
   padding: 6px 0px;
   -webkit-box-sizing: border-box;
@@ -884,16 +888,18 @@ a {
   background-color: #f2f2f2;
   border: none;
   min-height: 38px;
+  border: 2px solid #f2f2f2;
 }
 
 .interested-item input:hover {
   background-color: #ebebeb;
+  border: 2px solid #ebebeb;
 }
 
 .interested-item input:focus {
   outline: none;
   background-color: #ffffff;
-  outline: 2px solid #e5e5e5;
+  border: 2px solid #e5e5e5;
 }
 
 .map {
